@@ -1,0 +1,33 @@
+Language,Countries,Degree of endangerment,Number of speakers,Total_Speakers,Duplicate_Columns,Endangerment_Level
+amharic,Ethiopia,Safe,60000000,60000000,FALSE,0
+arabic,Many,Safe,435000000,435000000,FALSE,0
+bengali,Bangladesh,Safe,278000000,278000000,FALSE,0
+bhojpuri,India,Safe,53000000,53000000,FALSE,0
+chinese,China,Safe,1361000000,1361000000,FALSE,0
+english,Many,Safe,1515000000,1515000000,FALSE,0
+french,Many,Safe,312000000,312000000,FALSE,0
+german,Many,Safe,134000000,134000000,FALSE,0
+gujarati,India,Safe,63000000,63000000,FALSE,0
+hausa,Many,Safe,88000000,88000000,FALSE,0
+hindi,India,Safe,609000000,609000000,FALSE,0
+indonesian,indonesia,Safe,199000000,199000000,FALSE,0
+iranian,iran,Safe,78000000,78000000,FALSE,0
+italian,italy,Safe,67000000,67000000,FALSE,0
+japanese,japan,Safe,123000000,123000000,FALSE,0
+javanese,indonesia,Safe,68000000,68000000,FALSE,0
+kannada,India,Safe,59000000,59000000,FALSE,0
+korean,korea,Safe,81000000,81000000,FALSE,0
+marathi,India,Safe,99000000,99000000,FALSE,0
+nigerian,nigeria,Safe,121000000,121000000,FALSE,0
+portuguese,Many,Safe,264000000,264000000,FALSE,0
+punjabi,India,Safe,82000000,82000000,FALSE,0
+russian,Russia,Safe,255000000,255000000,FALSE,0
+spanish,Many,Safe,560000000,560000000,FALSE,0
+swahili,Many,Safe,87000000,87000000,FALSE,0
+tagalogb,Philippines,Safe,83000000,83000000,FALSE,0
+tamil,Sri Lanka,Safe,87000000,87000000,FALSE,0
+telugu,telugu,Safe,96000000,96000000,FALSE,0
+thai,Thailand,Safe,61000000,61000000,FALSE,0
+turkish,turkey,Safe,90000000,90000000,FALSE,0
+urdu,Pakistan,Safe,238000000,238000000,FALSE,0
+vietnamese,vietnam,Safe,86000000,86000000,FALSE,0

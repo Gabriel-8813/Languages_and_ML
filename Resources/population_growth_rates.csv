@@ -1,0 +1,243 @@
+Country,Growth Rate (%)
+(%),Year
+World,1.17
+Afghanistan,2.22
+Albania *,0.16
+Algeria *,1.54
+Andorra *,-0.12
+Angola *,3.33
+Antigua and Barbuda *,1.11
+Argentina *,0.79
+Armenia *,-0.42
+Australia *,1.13
+Austria *,0.30
+Azerbaijan *,0.43
+Bahamas *,1.07
+Bahrain *,0.82
+Bangladesh *,0.89
+Barbados *,0.23
+Belarus *,-0.42
+Belgium *,0.53
+Belize *,1.47
+Benin *,3.29
+Bhutan *,0.95
+Bolivia *,1.00
+Bosnia and Herzegovina *,-0.25
+Botswana *,1.34
+Brazil *,0.61
+Brunei *,1.40
+Bulgaria *,-0.66
+Burkina Faso *,2.40
+Myanmar *,0.71
+Burundi *,2.81
+Cape Verde *,1.16
+Cambodia *,0.99
+Cameroon *,2.71
+Canada *,0.71
+Central African Republic *,1.76
+Chad *,3.01
+Chile *,0.63
+China *[a],0.18
+Colombia *,0.54
+Comoros *[b],1.34
+DR Congo *,3.13
+Congo *,2.33
+Costa Rica *,0.98
+Ivory Coast *,2.16
+Croatia *,-0.47
+Cuba *,-0.19
+Cyprus *,1.00
+Czech Republic *,0.00
+Denmark *,0.44
+Djibouti *,1.93
+Dominica *,0.02
+Dominican Republic *,0.88
+Ecuador *,1.10
+Egypt *,1.59
+El Salvador *,0.46
+Equatorial Guinea *,3.36
+Eritrea *,1.08
+Estonia *,-0.74
+Eswatini (Swaziland) *,0.72
+Ethiopia *,2.42
+Fiji *,0.42
+Finland *,0.22
+France *[c],0.31
+Gabon *,2.39
+Gambia *,2.23
+Georgia *,0.01
+Germany *,-0.12
+Ghana *,2.19
+Greece *,-0.35
+Grenada *,0.29
+Guatemala *,1.54
+Guinea *,2.75
+Guinea-Bissau *,2.54
+Guyana *,0.28
+Haiti *,1.18
+Honduras *,1.16
+Hungary *,-0.31
+Iceland *,0.89
+India *,0.70
+Indonesia *,0.76
+Iran *,0.93
+Iraq *,1.94
+Ireland *,0.91
+Israel *,1.43
+Italy *,-0.11
+Jamaica *,0.09
+Japan *,-0.41
+Jordan *,0.79
+Kazakhstan *,0.73
+Kenya *,2.09
+Kiribati *,1.02
+North Korea *,0.44
+South Korea *,0.23
+Kuwait *,1.13
+Kyrgyzstan *,0.82
+Laos *,1.30
+Latvia *,-1.13
+Lebanon *,0.64
+Lesotho *,0.76
+Liberia *,2.71
+Libya *,1.54
+Liechtenstein *,0.70
+Lithuania *,-1.04
+Luxembourg *,1.58
+Madagascar *,2.22
+Malawi *,2.28
+Malaysia *,1.01
+Maldives *,-0.17
+Mali *,2.93
+Malta *,0.59
+Marshall Islands *,1.30
+Mauritania *,1.96
+Mauritius *,0.09
+Mexico *,0.61
+Micronesia *,-0.70
+Moldova *,-1.14
+Monaco *,0.66
+Mongolia *,0.83
+Montenegro *,-0.43
+Morocco *,0.88
+Mozambique *,2.55
+Namibia *,1.80
+Nauru *,0.42
+Nepal *,0.74
+Netherlands *,0.36
+New Zealand *,1.06
+Nicaragua *,0.91
+Niger *,3.66
+Nigeria *,2.53
+North Macedonia *,0.11
+Norway *,0.79
+Oman *,1.80
+Pakistan *,1.91
+Palau *,0.39
+Panama *,1.51
+Papua New Guinea *,2.31
+Paraguay *,1.12
+Peru *,0.50
+Philippines *,1.58
+Poland *,-0.28
+Portugal *,-0.17
+Qatar *,0.86
+Romania *,-1.01
+Russia *,-0.24
+Rwanda *,1.68
+Saint Kitts and Nevis *,0.59
+Saint Lucia *,0.27
+Saint Vincent and the Grenadines *,-0.16
+Samoa *,0.65
+San Marino *,0.59
+São Tomé and Príncipe *,1.45
+Saudi Arabia *,1.65
+Senegal *,2.52
+Serbia *,-0.63
+Seychelles *,0.60
+Sierra Leone *,2.41
+Singapore *,0.90
+Slovakia *,-0.12
+Slovenia *,-0.08
+Solomon Islands *,1.69
+Somalia *,2.55
+South Africa *,1.07
+South Sudan *,4.65
+Spain *,0.12
+Sri Lanka *,0.39
+Sudan *,2.55
+Suriname *,1.07
+Sweden *,0.51
+Switzerland *,0.64
+Syria *,6.39
+Taiwan *,0.03
+Tajikistan *,1.36
+Tanzania *,2.75
+Thailand *,0.20
+Timor-Leste *,2.10
+Togo *,2.45
+Tonga *,-0.30
+Trinidad and Tobago *,0.12
+Tunisia *,0.63
+Turkey *,0.64
+Turkmenistan *,0.95
+Tuvalu *,0.81
+Uganda *,3.22
+Ukraine *,-0.52
+United Arab Emirates *,0.58
+United Kingdom *,0.49
+United States *,0.68
+Uruguay *,0.27
+Uzbekistan *,0.81
+Vanuatu *,1.59
+Vatican City *,0.00
+Venezuela *,2.40
+Vietnam *,0.93
+Western Sahara *(Sahrawi),
+Yemen *,1.83
+Zambia *,2.86
+Zimbabwe *,1.95
+Anguilla *(UK),1.77
+Aruba *(Netherlands),1.11
+Bermuda *(UK),0.32
+Caribbean Netherlands,
+Cayman Islands *(UK),1.79
+Channel Islands(UK)[d],
+Christmas Island *(Australia),1.11
+Cook Islands *(NZ),-2.31
+Curaçao *(Netherlands),
+Faroe Islands *(Denmark),0.63
+Falkland Islands *,0.01
+Gibraltar *(UK),0.19
+Greenland *(Denmark),-0.04
+Guadeloupe *(France),
+Guam *(US),0.13
+French Guiana *,
+Hong Kong *,0.15
+Isle of Man *(UK),0.48
+Kosovo *,0.62
+Macau *,0.71
+Martinique *(France),
+Mayotte *(France),
+Montserrat *(UK),0.46
+New Caledonia *(France),1.17
+Niue *(New Zealand),-0.03
+Norfolk Island *(Australia),0.01
+Northern Mariana Islands *(US),-0.35
+Pitcairn Islands *(UK),0.00
+French Polynesia *,0.70
+Puerto Rico *(US),-1.29
+Réunion *(France),
+Saint Helena and Dependencies *(UK),0.11
+Saint Pierre and Miquelon *(France),-1.19
+American Samoa *,-1.74
+Sint Maarten *(Netherlands),1.19
+Svalbard *(Norway),-0.03
+Tokelau *(NZ),-0.01
+Turks and Caicos Islands *(UK),1.81
+British Virgin Islands *,1.87
+U.S. Virgin Islands *,-0.49
+Wallis and Futuna *(France),0.23
+West Bank *,1.66
+Gaza Strip *,1.99
+Palestine,
