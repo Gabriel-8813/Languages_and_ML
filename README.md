@@ -52,8 +52,8 @@ Due to a CORS issue when opening the Javascript Leaflet index html directly on C
 
 Relevant files:
 * Logistic Regression.ipynb: Python script for data preprocessing, feature engineering, model training, evaluation and optimization.
-* Elcat_data.csv: Data from 2023, including language names, ISO codes, endangerment levels and speaker counts.
-* Kaggle_data.csv: Data from 2024, including language names, ISO codes, endangerment levels and speaker counts.
+* Elcat_data.csv: Data from 2023, including language names, ISO codes, endangerment levels and speaker counts (https://www.kaggle.com/datasets/the-guardian/extinct-languages/data)
+* Kaggle_data.csv: Data from 2024, including language names, ISO codes, endangerment levels and speaker counts ((https://www.endangeredlanguages.com/userquery/)
 
 This project applies Logistic Regression to predict the future endangerment status of languages based on speaker trends. In addition to the Kaggle data used for the Javascript Leaflet visualisation map, an addition dataset was used from the Endangered Languages Project (Elcat) (https://www.endangeredlanguages.com/userquery/).
 
@@ -106,12 +106,17 @@ The data was loaded into a Pandas Dataframe and cleaned to forward fill Nan valu
 
 These Degrees of Endangerment are then mapped to numeric values and encoded accordingly with the LabelEncoder tool from sklearn.preprocessing.
 
+The x and y variables were also defined. Features (x) were chosen as the Number of Speakers and Countries.
+The target variable (y) was defined as the Degree of Endangerment.
+The train_test_split function was used to create a 80:20 training:testing split
 
+### Result
 
+The XGBoost model yielded an accuracy of only 47%. Though this is an improvement over the Logistic Regression Model, it is still not an ideal result. And despite efforts to optimize the XGBoost model, only 49% accuracy could be obtained.
 
 # Random Forest
 
-Due to doubts on the reliability of the data used for Logistic Regression earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
+Due to doubts on the reliability of the data used for Logistic Regression and XGBoost earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
 
 * Duolingo Data
 * UN Population Data
