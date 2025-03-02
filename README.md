@@ -148,8 +148,19 @@ Running the model yields the following results:
 
 A classification report and Confusion Matrix also shed more detail on the results. Overall, this is a significant improvement over the results of the Logistic Regression model.
 
-In addition to an overall accuracy of 75%, we can see that the model also performs well for Languages labeled as Extinct or Safe, both having perfect precision and recall. However it was the opposite case with Severely endangered and vulnerable categories,, indicating this data was not well detected.
+In addition to an overall accuracy of 75%, we can see that the model also performs well for Languages labeled as Extinct or Safe, both having perfect precision and recall. However it was the opposite case with Severely endangered and vulnerable categories, indicating this data was not well detected.
 
+### Feature Importance Analysis
+
+A feature importance analysis was done to ascertain the most important features in our data. The most important feature was found to be the ['Number of Speakers'].
+
+## Random Forest - Optimization
+
+In an effort to further optimize the model, the GridSearchCV tool was used from sklearn.model_selection to optimize the hyperparameters. GridSearchCV tested 108 different models and found the best parameters to use. However, even after retraining the model with these best parameters, accuracy decreased to 74%.
+
+This may be due to the limitations of the dataset used. Data imblalance for some categories may have led to poor recall for some endangerment classes, such as the Severely Endangered class.   
+
+The 75% accuracy from the baseline Random Forest Model is the best result so far and is a viable result. And since optimization is proving counter-productive, no further optimization was conducted.
 
 ## Code Explanation:
 
@@ -166,7 +177,7 @@ Optional XGBoost Classifier: Train an XGBoost model for comparison to see if it 
 
 
 
-# Summary of the Code
+
 
 ## Purpose:
 
