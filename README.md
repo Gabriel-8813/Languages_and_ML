@@ -68,7 +68,7 @@ However, despite these steps, the accuracy in the optimized decreased to 32.9%, 
 
 Due to the overall significant degree of inaccuracy in the model, no further attempts at optimization were made. Other models were explored instead.
 
-### Random Forest
+# Random Forest
 
 Due to doubts on the reliability of the data used for Logistic Regression earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
 
