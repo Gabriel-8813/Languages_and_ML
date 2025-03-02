@@ -86,6 +86,35 @@ The primary data collection methods were:
 * Web scraping using requests and BeautifulSoup to fetch tables from Wikipedia pages.
 * Data extraction and formatting to convert raw web-scraped data into structured CSV files.
 
+Web Scraping
+Beautiful Soup was used to scrape data from Wikipeida and two additional datasets were collected:
+
+* Languages Used on the Internet (from Wikipedia)
+    * Extracted language names and their percentage usage on websites.
+    * Stored in df_languages_internet and saved as a CSV file.
+* Official Languages by Country (from Wikipedia)
+    * Extracted country names and their official languages.
+    * Cleaned and stored in df_languages.
+
+A third dataset on Population Growth Rates by Country was also scraped, processed, and saved.
+
+Data Cleaning & Preprocessing
+
+The raw datasets contained inconsistencies that required processing before analysis
+
+Processing the Widely Spoken & Endangered Languages Datasets:
+* Dropped unnecessary columns: Removed attributes like "Family", "Branch", and separate L1/L2 speaker counts.
+* Renamed columns: Changed "Total speakers (L1+L2)" to "Total_Speakers".
+* Converted numerical values: Transformed text-based numbers (e.g., "1.2 billion") into float values.
+* Handled missing values: Filled NaN values in "Total_Speakers" with an estimated placeholder value (1000).
+* After the datasets were cleaned, they were merged
+
+Processing Population Growth Rate Data
+* Extracted country names and growth rates from the scraped Wikipedia table.
+* Removed unwanted characters (e.g., asterisks in country names).
+* Stored cleaned data in a new CSV file for easier integration.
+
+After cleaning
 
 
 ## Code Explanation:
