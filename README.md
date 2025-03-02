@@ -68,7 +68,7 @@ However, despite these steps, the accuracy in the optimized decreased to 32.9%, 
 
 Due to the overall significant degree of inaccuracy in the model, no further attempts at optimization were made. Other models were explored instead.
 
-## Random Forest
+### Random Forest
 
 Due to doubts on the reliability of the data used for Logistic Regression earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
 
@@ -114,7 +114,11 @@ Processing Population Growth Rate Data
 * Removed unwanted characters (e.g., asterisks in country names).
 * Stored cleaned data in a new CSV file for easier integration.
 
-After cleaning
+Data Merging
+
+After cleaning, an outer merge was done on the Endangered Languages and Widely Spoken Languages datasets. The merged dataset was stored as df_languages. Some additional cleaning was done to this, and finally the df_language_final.csv was ready for the Random Forest Model.
+
+
 
 
 ## Code Explanation:
