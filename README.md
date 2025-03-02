@@ -1,4 +1,4 @@
-## Javascript Leaflet Map
+# Javascript Leaflet Map
 
 An interactive visualisation of Endangered languages across the world was created using Leaflet.js and OpenStreetMap. The plotMarkers fucntion was used in Javascript to display the approximate coordinates/location of the spoken language as markers on an interactive map. The getColor function was also used to colour-code the markers, and highlight the degree of endangerment:
 
@@ -24,7 +24,7 @@ Due to a CORS issue when opening the Javascript Leaflet index html directly on C
 2) Run the following on GitBash: python -m http.server 5000
 3) Paste this link in your browser: http://localhost:5000/map.html
 
-## Logistic Regression Model
+# Logistic Regression Model
 
 Relevant files:
 * Logistic Regression.ipynb: Python script for data preprocessing, feature engineering, model training, evaluation and optimization.
@@ -86,7 +86,7 @@ The primary data collection methods were:
 * Web scraping using requests and BeautifulSoup to fetch tables from Wikipedia pages.
 * Data extraction and formatting to convert raw web-scraped data into structured CSV files.
 
-Web Scraping
+### Web Scraping
 Beautiful Soup was used to scrape data from Wikipeida and two additional datasets were collected:
 
 * Languages Used on the Internet (from Wikipedia)
@@ -98,7 +98,7 @@ Beautiful Soup was used to scrape data from Wikipeida and two additional dataset
 
 A third dataset on Population Growth Rates by Country was also scraped, processed, and saved.
 
-Data Cleaning & Preprocessing
+### Data Cleaning & Preprocessing
 
 The raw datasets contained inconsistencies that required processing before analysis
 
