@@ -70,7 +70,23 @@ Due to the overall significant degree of inaccuracy in the model, no further att
 
 ## Random Forest
 
-Due to doubts on the reliability of the data used for Logistic Regression earlier, a separate dataset was used for a Random Forest model.
+Due to doubts on the reliability of the data used for Logistic Regression earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
+
+* Duolingo Data
+* UN Population Data
+* Endangered Languages data
+* Widely Spoken Languages data
+* Scraped Web Data:
+    * Languages Used on the Internet: Extracted from Wikipedia using BeautifulSoup.
+    * Official Languages by Country: Extracted from Wikipedia.
+    * Countries by Population Growth Rate: Extracted from Wikipedia.
+
+The primary data collection methods were:
+* Loading CSV files from the internet into a Pandas DataFrames.
+* Web scraping using requests and BeautifulSoup to fetch tables from Wikipedia pages.
+* Data extraction and formatting to convert raw web-scraped data into structured CSV files.
+
+
 
 ## Code Explanation:
 
