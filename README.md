@@ -118,7 +118,11 @@ Data Merging
 
 After cleaning, an outer merge was done on the Endangered Languages and Widely Spoken Languages datasets. The merged dataset was stored as df_languages. Some additional cleaning was done to this, and finally the df_language_final.csv was ready for the Random Forest Model.
 
+## Random Forest Implementation
 
+The clean data is loaded into a Pandas Dataframe. Next the OneHotEncoder tool from sklearn.preprocessing was used to convert categorical variables of ['Language', 'Countries',] into numerical representations. Then the pd.concat function is used to merge these encoded variables with the other numerical variables.
+
+Next the X and y variables are defined. 
 
 
 ## Code Explanation:
