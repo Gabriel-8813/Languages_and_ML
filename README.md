@@ -52,6 +52,8 @@ Then the features and target for the x and y variables in the model are defined.
 
 The target (y) is defined as "Degree of endangerment_2024_encoded". Next the train_test_split function from sklearn.model_selection is used to split the data into training and test sets. The model has been structured to train on 80% of the data, and test on 20% of the encoded data. 
 
+### Result
+
 The baseline model was run with only 1000 iterations. However, the results showed an accuracy of only 40.2%. The results also seemed to be a bit biased towards the critically endangered category, which had a 95% recall. The Vulnerable & Severely Endangered categories also performed poorly, having low recall and precision. The Extinction category was also deemed irrelevant in this result.
 
 ## Logistic Regression - Optimization
@@ -63,6 +65,8 @@ The baseline model only used raw speaker counts from 2023 and 2024, which does n
 The SMOTE tool from imblearn.over_sampling was also used to balance the dataset. For example, the Extinct category was deemed virtually irrelevant in the baseline attempt. Generating synthetic samples using SMOTE can balance the dataset. It can therefore generate more samples for underrepresented classes, improving recall.
 
 Finally, to maximise the effectiveness of the model, the iterations were increased to 5000.
+
+### Result
 
 However, despite these steps, the accuracy in the optimized decreased to 32.9%, marking a significant deterioration from the baseline model. The optimized model did actaully improve recall, but due to the nature of the data and possibly also synthetic values, accuracy decreased.
 
@@ -123,6 +127,28 @@ After cleaning, an outer merge was done on the Endangered Languages and Widely S
 The clean data is loaded into a Pandas Dataframe. Next the OneHotEncoder tool from sklearn.preprocessing was used to convert categorical variables of ['Language', 'Countries',] into numerical representations. Then the pd.concat function is used to merge these encoded variables with the other numerical variables.
 
 Next the X and y variables are defined. 
+
+The features set (x) is defined by the transformed dataset containing numerical values and encoded categorical features
+The target variable (y) is defined as the ['Degree of endangerment'] column.
+
+Next the train_test_split function was used to split the dataset into training and testing splits, with a ratio of 75:25, respectively.
+
+The StandardScaler tool from sklearn.preprocessing was applied to normalize the feature values. 
+
+Next the RandomForestClassifier tool from sklearn.ensemble was used to create a model with 500 estimators. The predict(X_test_scaled) function is used to make the predictions.
+
+### Results
+
+Running the model yields the following results:
+
+* Accuracy: 0.75
+* Precision: 0.66
+* Recall: 0.75
+* F1-Score: 0.70
+
+A classification report and Confusion Matrix also shed more detail on the results. Overall, this is a significant improvement over the results of the Logistic Regression model.
+
+In addition to an overall accuracy of 75%, we can see that the model also performs well for Languages labeled as Extinct or Safe, both having perfect precision and recall. However it was the opposite case with Severely endangered and vulnerable categories,, indicating this data was not well detected.
 
 
 ## Code Explanation:
