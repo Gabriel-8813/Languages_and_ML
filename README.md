@@ -1,3 +1,27 @@
+# Introduction: 
+ 
+In an increasingly globalized world, understanding linguistic diversity is crucial for 
+preserving cultural heritage and facilitating communication. This project aims to 
+investigate the most widely spoken languages and those at risk of extinction using 
+machine learning techniques. By analyzing the prevalence of languages, we can 
+shed light on the factors contributing to language vitality and identify opportunities for 
+language preservation.
+
+
+# Objectives: 
+●  To analyze and visualize the current status of the world's most widely spoken 
+languages compared to those at risk of extinction. 
+ 
+●  To employ machine learning techniques to classify languages based on their 
+attributes and predict which languages are more likely to face extinction. 
+ 
+●  To predict the language growth over the next years using various factors such 
+as population growth, immigration patterns, social and economic strengths.  
+ 
+●  To provide insights for academics and future research efforts on how to 
+prioritize language preservation efforts.
+
+
 # Javascript Leaflet Map
 
 An interactive visualisation of Endangered languages across the world was created using Leaflet.js and OpenStreetMap. The plotMarkers fucntion was used in Javascript to display the approximate coordinates/location of the spoken language as markers on an interactive map. The getColor function was also used to colour-code the markers, and highlight the degree of endangerment:
@@ -161,6 +185,11 @@ In an effort to further optimize the model, the GridSearchCV tool was used from 
 This may be due to the limitations of the dataset used. Data imblalance for some categories may have led to poor recall for some endangerment classes, such as the Severely Endangered class.   
 
 The 75% accuracy from the baseline Random Forest Model is the best result so far and is a viable result. And since optimization is proving counter-productive, no further optimization was conducted.
+
+# XGBoost
+
+A third attempt at improving overall accuracy was made with XGBoost. 
+
 
 ## Code Explanation:
 
