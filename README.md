@@ -96,6 +96,19 @@ However, despite these steps, the accuracy in the optimized decreased to 32.9%, 
 
 Due to the overall significant degree of inaccuracy in the model, no further attempts at optimization were made. Other models were explored instead.
 
+# XGBoost
+
+A second attempt at improving overall accuracy was made with XGBoost. The same Kaggle data used for the Logistic Regression earlier was for this. 
+
+### Data Preprocessing
+
+The data was loaded into a Pandas Dataframe and cleaned to forward fill Nan values with the fillna(method='ffill') function. The unique values of "Degree of endangerment" are also identified and printed.
+
+These Degrees of Endangerment are then mapped to numeric values and encoded accordingly with the LabelEncoder tool from sklearn.preprocessing.
+
+
+
+
 # Random Forest
 
 Due to doubts on the reliability of the data used for Logistic Regression earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
@@ -185,10 +198,6 @@ In an effort to further optimize the model, the GridSearchCV tool was used from 
 This may be due to the limitations of the dataset used. Data imblalance for some categories may have led to poor recall for some endangerment classes, such as the Severely Endangered class.   
 
 The 75% accuracy from the baseline Random Forest Model is the best result so far and is a viable result. And since optimization is proving counter-productive, no further optimization was conducted.
-
-# XGBoost
-
-A third attempt at improving overall accuracy was made with XGBoost. 
 
 
 ## Code Explanation:
