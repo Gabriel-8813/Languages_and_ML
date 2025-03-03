@@ -90,6 +90,7 @@ However, despite these steps, the accuracy in the optimized decreased to 32.9%, 
 Due to the overall significant degree of inaccuracy in the model, no further attempts at optimization were made. Other models were explored instead.
 
 # XGBoost
+Relevant files: languages.ipynb
 
 A second attempt at improving overall accuracy was made with XGBoost. The same Kaggle data used for the Logistic Regression earlier was used. 
 
@@ -108,6 +109,9 @@ The train_test_split function was used to create a 80:20 training:testing split
 The XGBoost model yielded an accuracy of only 49%. Though this is an improvement over the Logistic Regression Model, it is still not an ideal result. And despite efforts to optimize the XGBoost model, only 49% accuracy could be obtained.
 
 # Random Forest
+Relevant files:
+* Data_Collection_and_Preprocessing.ipynb
+* RandomForest_Model.ipynb
 
 Due to doubts on the reliability of the data used for Logistic Regression and XGBoost earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data exploration was mapped:
 
@@ -200,9 +204,9 @@ The 75% accuracy from the baseline Random Forest Model is the best result so far
 
 # Discussion of results
 
- Using the Random Forst Model, we were able to achieve 75% accuracy to showcase this. Our model was essentially able to correctly classify 75% of the languages in our data. The high recall rate for safe and critically endangered languages indicates our model was adequately able to identify all cases in this class. We also have a good recall rate for the Definitely Endangered class. 
+ Using the Random Forst Model, we were able to achieve 75% accuracy. Our model was essentially able to correctly classify 75% of the languages in our data. The high recall rate for safe and critically endangered languages indicates our model was adequately able to identify all cases in this class. We also have a good recall rate for the Definitely Endangered class. 
 
-However, the model is unable to classify the Vulnerable and Severely Endangered classes. These inconsistencies can be explained by class imbalances, as some categories have fewer samples than others.  The model also favours larger classes such as critically endangered and safe, leading to poor recall for other smaller classes. Looking at the Confusion Matrix, it's also possible that the model misclassifies Definitely Endangered Languages as Critically Endangered, which could explain their recall rates.
+However, the model is unable to classify the Vulnerable and Severely Endangered classes. These inconsistencies can be explained by class imbalances, as some categories have fewer samples than others. The model also favours larger classes such as critically endangered and safe, leading to poor recall for other smaller classes. Looking at the Confusion Matrix, it's also possible that the model misclassifies Definitely Endangered Languages as Critically Endangered, which could explain their recall rates.
 
 Another potential issue could be bias toward speaker count, as it is by far the most important feature. This may also explain why some classes are misclassified, as they may have similar speaker counts to other categories. However this issue is unavoidable in this project, due to the lack of adequate data. Accessing readily available data has been a consistent issue throughout this project. More readily available data from free resources may have prevented these issues.
 
