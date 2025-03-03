@@ -34,7 +34,7 @@ An interactive visualisation of Endangered languages across the world was create
 
 Furthermore, the size of the markers indicate the number of language speakers. The marker.bindPopup() function was also used in Javascript, so that markers can also be clicked to give a snapshot of the data via a popup.
 
-The data used for this visualisation was sourced via Kaggle. Minimal cleaning was required for the dataset. Javacript functions such as L.tileLayer were used to incorporate OpenStreetMap for this visualisation.
+The data used for this visualisation was sourced via Kaggle (https://www.kaggle.com/datasets/the-guardian/extinct-languages/data). Minimal cleaning was required for the dataset. Javacript functions such as L.tileLayer were used to incorporate OpenStreetMap for this visualisation.
 
 File Structure:
 * index.html: Main HTML page containing the map.
@@ -55,26 +55,19 @@ Relevant files:
 * Elcat_data.csv: Data from 2023, including language names, ISO codes, endangerment levels and speaker counts (https://www.kaggle.com/datasets/the-guardian/extinct-languages/data)
 * Kaggle_data.csv: Data from 2024, including language names, ISO codes, endangerment levels and speaker counts ((https://www.endangeredlanguages.com/userquery/)
 
-This project applies Logistic Regression to predict the future endangerment status of languages based on speaker trends. In addition to the Kaggle data used for the Javascript Leaflet visualisation map, an addition dataset was used from the Endangered Languages Project (Elcat) (https://www.endangeredlanguages.com/userquery/).
+This project applies Logistic Regression to predict the future endangerment status of languages based on speaker trends. 
 
-However, due to the limitations of data, especially Year-on-year data in the same format, for simplicity and because no publishing date was available on the websites, the Kaggle Data was denoted as 2024 data, and the Elcat data was denoted as 2023 data. Both datasets were loaded into a Pandas Dataframe and cleaned thoroughly. Some unnecessary columns were removed. Unnecessary characters such as commas, '-', '~' and '<>' were removed and the speaker counts were converted to numerical formats. Then both datasets were merged into the merged_csv dataset, using an inner join on the internationally-recognized ISO codes for languages. However, this did reduce the dataset to 1800 records, due to incomplete data and difficulty in obtaining data.
+However, due to the limitations of data, especially Year-on-year data in the same format, for simplicity, the Kaggle Data was denoted as 2024 data, and the Elcat data was denoted as 2023 data. Both datasets were loaded into a Pandas Dataframe and cleaned thoroughly. Some unnecessary columns were dropped. Unnecessary characters such as commas, '-', '~' and '<>' were removed and the speaker counts were converted to numerical formats. The datasets were merged using an inner join on the internationally-recognized ISO codes for languages.
 
-To create useful input features, the percentage change in speakers was calculated. Due to some abnormal outliers in the data, % change was capped at 100%. This was a consequence of missing and a lack of ease in access to readily available data from free resources. Therefore, in cases where some data was missing, synthetic data was also used sparingly, using upto 10% change in count of the available year's data.
+Due to some abnormal outliers in the data, % change was capped at 100%. This was a consequence of missing and a lack of ease in access to readily available data from free resources. Therefore, in cases where some data was missing, synthetic data was also used sparingly, using upto 10% change in count of the available year's data.
 
-Encode the Target Variable
-Data from 2023 - 2024 is being analyzed in this model, using historical speaker counts to classify languages into the following categories:
-
-* Vulnerable
-* Definitely Endangered
-* Severely Endangered
-* Critically Endangered
-* Extinct
+### Encode the Target Variable
+Data from 2023 - 2024 is being analyzed in this model, using historical speaker counts to classify languages into categories based on endangerment levels.
 
 The "Degree of Endangerment" is a categorical variable in our model, so the LabelEncoder tool from sklearn.preprocessing is used to convert it into numerical format. This step allows Logistic Regression to process categorical labels. 
 
-Then the features and target for the x and y variables in the model are defined. Features (x) are defined as ["Speaker Change (%)", "Number of speakers 2024", "Number of speakers (2023)", "Degree of endangerment_2023_encoded"].
-
-The target (y) is defined as "Degree of endangerment_2024_encoded". Next the train_test_split function from sklearn.model_selection is used to split the data into training and test sets. The model has been structured to train on 80% of the data, and test on 20% of the encoded data. 
+Once the features and target ( x and y variables) for the model have been defined,train_test_split function from sklearn.model_selection is used to split the data into training and test sets. The model has been structured to train on 80% of the data, and test on 20% of the encoded data. 
+Once the features and target ( x and y variables) for the model have been defined, 
 
 ### Result
 
@@ -98,7 +91,7 @@ Due to the overall significant degree of inaccuracy in the model, no further att
 
 # XGBoost
 
-A second attempt at improving overall accuracy was made with XGBoost. The same Kaggle data used for the Logistic Regression earlier was for this. 
+A second attempt at improving overall accuracy was made with XGBoost. The same Kaggle data used for the Logistic Regression earlier was used. 
 
 ### Data Preprocessing
 
@@ -112,11 +105,11 @@ The train_test_split function was used to create a 80:20 training:testing split
 
 ### Result
 
-The XGBoost model yielded an accuracy of only 47%. Though this is an improvement over the Logistic Regression Model, it is still not an ideal result. And despite efforts to optimize the XGBoost model, only 49% accuracy could be obtained.
+The XGBoost model yielded an accuracy of only 49%. Though this is an improvement over the Logistic Regression Model, it is still not an ideal result. And despite efforts to optimize the XGBoost model, only 49% accuracy could be obtained.
 
 # Random Forest
 
-Due to doubts on the reliability of the data used for Logistic Regression and XGBoost earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data was utilized:
+Due to doubts on the reliability of the data used for Logistic Regression and XGBoost earlier, further data exploration was conducted in order to find more reliable data before attempting a Random Forest model. The following data exploration was mapped:
 
 * Duolingo Data
 * UN Population Data
@@ -162,7 +155,7 @@ Processing Population Growth Rate Data
 
 Data Merging
 
-After cleaning, an outer merge was done on the Endangered Languages and Widely Spoken Languages datasets. The merged dataset was stored as df_languages. Some additional cleaning was done to this, and finally the df_language_final.csv was ready for the Random Forest Model.
+After cleaning, an outer merge was done on the Endangered Languages and Widely Spoken Languages datasets and finally the data was combined with the original dataset used previously. The merged dataset was stored as df_languages. Some additional cleaning was done to this, to get it ready for the Random Forest Model.
 
 ## Random Forest Implementation
 
@@ -173,7 +166,7 @@ Next the X and y variables are defined.
 The features set (x) is defined by the transformed dataset containing numerical values and encoded categorical features
 The target variable (y) is defined as the ['Degree of endangerment'] column.
 
-Next the train_test_split function was used to split the dataset into training and testing splits, with a ratio of 75:25, respectively.
+Next the train_test_split function was used to split the dataset into training and testing splits, with a default ratio of 75:25.
 
 The StandardScaler tool from sklearn.preprocessing was applied to normalize the feature values. 
 
@@ -205,41 +198,16 @@ This may be due to the limitations of the dataset used. Data imblalance for some
 The 75% accuracy from the baseline Random Forest Model is the best result so far and is a viable result. And since optimization is proving counter-productive, no further optimization was conducted.
 
 
-## Code Explanation:
+# Discussion of results
 
-Load the Data: Load the language data from a CSV file into a DataFrame.
-Data Preprocessing: Handle missing values with forward fill, but you can apply other strategies depending on your dataset.
-Encoding Target Variable: Use LabelEncoder to convert the target variable "Degree of endangerment" into numeric format.
-Define Features and Target: Prepare the features (X) for the model from the DataFrame based on your specifications.
-Train-Test Split: Use train_test_split to divide the data into training and testing sets.
-Model Training: A Random Forest Classifier is instantiated and fitted to the training data.
-Predictions: The model makes predictions on the test set.
-Model Evaluation: Print the confusion matrix and classification report to understand model performance.
-Feature Importance Analysis: Extract and display feature importances to analyze which features most influence the classification.
-Optional XGBoost Classifier: Train an XGBoost model for comparison to see if it performs better.
+ Using the Random Forst Model, we were able to achieve 75% accuracy to showcase this. Our model was essentially able to correctly classify 75% of the languages in our data. The high recall rate for safe and critically endangered languages indicates our model was adequately able to identify all cases in this class. We also have a good recall rate for the Definitely Endangered class. 
 
+However, the model is unable to classify the Vulnerable and Severely Endangered classes. These inconsistencies can be explained by class imbalances, as some categories have fewer samples than others.  The model also favours larger classes such as critically endangered and safe, leading to poor recall for other smaller classes. Looking at the Confusion Matrix, it's also possible that the model misclassifies Definitely Endangered Languages as Critically Endangered, which could explain their recall rates.
 
+Another potential issue could be bias toward speaker count, as it is by far the most important feature. This may also explain why some classes are misclassified, as they may have similar speaker counts to other categories. However this issue is unavoidable in this project, due to the lack of adequate data. Accessing readily available data has been a consistent issue throughout this project. More readily available data from free resources may have prevented these issues.
 
+# Conclusion
 
+The project effectively demonstrates a machine learning pipeline that can help classify languages at risk of extinction based on their endangerment status. Overall, we can conclude that languages with very few speakers are consistently classified as more endangered, meaning speaker count is a strong predictor of language decline. However, there is not enough data to forecast future trends.
 
-## Purpose:
-
-The provided code aims to classify languages based on their risk of extinction using machine learning techniques. By analyzing various features, such as the current number of speakers, geographic coordinates (latitude and longitude), and the degree of endangerment, the goal is to predict the endangerment status of languages. This classification helps identify languages that require preservation efforts to prevent extinction.
-
-# Outcomes:
-
-1. Model Training and Evaluation: The code implements a Random Forest classifier to predict the "Degree of endangerment" from the features provided. Using the train_test_split function, the dataset is divided into training and testing sets for model evaluation. The performance of the model is assessed using a confusion matrix and a classification report, which includes metrics like precision, recall, F1-score, and overall accuracy.
-2. Performance Metrics:
-The Random Forest model shows an accuracy of approximately 61%. The confusion matrix indicates the number of correct and incorrect predictions across the different classes of endangerment. The classification report provides insights into how well the model performs for each class, highlighting potential classifications that may need improvement.
-3. Feature Importance: After training the model, feature importance is analyzed to determine which factors most influence the prediction of the degree of endangerment. In this case, "Number of speakers" emerges as the most critical feature, followed by "Longitude" and "Latitude".
-4. Comparison with XGBoost: Optionally, the code includes training of an XGBoost classifier for a comparative analysis. The performance of both models is tracked through similar metrics, with XGBoost also providing its own confusion matrix and classification report.
-
-# Interpretation in the Context of Machine Learning:
-
-1. Machine Learning Utility: The implementation of machine learning provides an efficient method for analyzing and predicting language endangerment status, enabling stakeholders to make data-driven decisions about linguistic preservation. The models can be enhanced with additional features (e.g., demographic statistics or education access) to improve predictive performance further.
-2. Classification Models: The choice of classifiers such as Random Forest and XGBoost is rooted in their robustness and effectiveness in handling classification tasks, particularly when dealing with non-linear relationships in complex datasets. The XGBoost algorithm, in particular, is known for its superior performance in many contexts and is favored for handling various data types efficiently.
-3. Feature Importance Insights: Understanding which features contribute most to language endangerment can guide policymakers and conservation experts in their efforts to prioritize resources and interventions. For instance, the significant role of the number of speakers suggests that languages with fewer speakers may be more at risk, reinforcing the need for proactive measures to support such languages.
-
-# Conclusion:
-
-The code effectively demonstrates a machine learning pipeline that can help classify languages at risk of extinction based on their endangerment status. The results offer valuable insights into language preservation and serve as a foundation for future enhancements, such as integrating more robust datasets or utilizing more advanced modeling techniques for even better predictions.
+The results offer valuable insights into language preservation and serve as a foundation for future enhancements, such as integrating more robust datasets or utilizing more advanced modeling techniques for even better predictions. Future attempts at this topic with access to more abundant data from paid sources should be able to incorporate a Time-Series Analysis to gauge language growth/decline in the future. More premium data in future studies could also overcome the issues faced due to class imbalances in this project. Similarly, future studies with access to more historical data may also be able to predict extinction rates, which can be greatly beneficial in linguistic preservation efforts. Larger studies with better data access may also be able to incorporate demographic trends to analyse their impact on languages. 
